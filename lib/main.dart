@@ -119,13 +119,15 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                ElevatedButton(
-                  child: Text('Decrement'),
-                  onPressed: () => _decrementCounter(),
-                ),
-                Container(
-                  width: 15.0,
-                ),
+                if (_counter > 0)
+                  ElevatedButton(
+                    child: Text('Decrement'),
+                    onPressed: () => _decrementCounter(),
+                  ),
+                if (_counter > 0)
+                  Container(
+                    width: 15.0,
+                  ),
                 ElevatedButton(
                   child: Text('Increment'),
                   onPressed: () => _incrementCounter(),

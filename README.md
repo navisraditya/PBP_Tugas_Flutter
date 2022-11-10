@@ -36,3 +36,7 @@ Muhammad Navis Raditya Riayatsyah (2106717291)
     ![1668046276135](image/README/1668046276135.png)
 
     * Dengan membuat kondisi dimana ketika _counter dapat dibagi 2, maka menjadi genap. Dan menjadikan kondisi ganjil sebagai *else condition*.
+  * [BONUS] Menyembunyikan/menghilangkan tombol - apabila *counter* bernilai 0
+    ![1668047452542](image/README/1668047452542.png)
+
+    * Membuat kondisi apabila _counter bernilai 0, maka tombol *decrement* tidak ditampilkan. Berkebalikan dengan kondisi *counter* bernilai >0.
