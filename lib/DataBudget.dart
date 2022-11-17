@@ -71,8 +71,13 @@ class _DataBudgetState extends StatelessWidget {
             children: <Widget>[
               ListTile(
                 title: Text("${Tampil.dataMap[x].judul} ()"),
-                subtitle: Text("Rp ${Tampil.dataMap[x].nominal}"),
-                isThreeLine: true,
+                subtitle: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Rp ${Tampil.dataMap[x].nominal}"),
+                    Text(Tampil.dataMap[x].jenis),
+                  ],
+                ),
               ),
             ],
           ),
