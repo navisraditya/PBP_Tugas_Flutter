@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/DataBudget.dart';
+import 'package:counter_7/model/DataBudget.dart';
 import 'package:flutter/services.dart';
+import 'package:counter_7/utils/drawer.dart';
 
 class Budget {
   String judul;
@@ -45,44 +46,7 @@ class _MyFormPageState extends State<TambahBudget> {
         title: const Text('Form Budget'),
       ),
       // Menambahkan drawer menu
-      drawer: Drawer(
-        child: Column(
-          children: [
-            // Menambahkan clickable menu
-            ListTile(
-              title: const Text('counter_7'),
-              onTap: () {
-                // Route menu ke halaman utama
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          const MyHomePage(title: 'counter_7')),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('Tambah Budget'),
-              onTap: () {
-                // Route menu ke halaman form
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const TambahBudget()),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('Data Budget'),
-              onTap: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const DataBudget()));
-              },
-            ),
-          ],
-        ),
-      ),
+      drawer: const drawer(),
       body: Form(
         key: _formKey,
         child: SingleChildScrollView(

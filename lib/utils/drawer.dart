@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/TambahBudget.dart';
+import 'package:counter_7/model/TambahBudget.dart';
+import 'package:counter_7/page/MyWatchlist.dart';
 
-class DataBudget extends StatelessWidget {
-  const DataBudget({super.key});
+import '../model/DataBudget.dart';
 
-  static const String _title = 'Data Budget';
+class drawer extends StatelessWidget {
+  const drawer({super.key});
 
-  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: _title,
-      home: Scaffold(
-        drawer: Drawer(
-          child: Column(
+    return Drawer(
+      child: Column(
             children: [
               // Menambahkan clickable menu
               ListTile(
@@ -48,46 +45,17 @@ class DataBudget extends StatelessWidget {
                           builder: (context) => const DataBudget()));
                 },
               ),
-            ],
-          ),
-        ),
-        appBar: AppBar(title: const Text(_title)),
-        body: _DataBudgetState(),
-      ),
-    );
-  }
-}
-
-class _DataBudgetState extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    List<Widget> mywidgets = [];
-
-    for (int x = 0; x < Tampil.dataMap.length; x++) {
-      mywidgets.add(
-        Card(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
               ListTile(
-                title: Text("${Tampil.dataMap[x].judul} ()"),
-                subtitle: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Rp ${Tampil.dataMap[x].nominal}"),
-                    Text(Tampil.dataMap[x].jenis),
-                  ],
-                ),
-              ),
+                title: const Text('My Watch List'),
+                onTap: () {
+                  Navigator.pushReplacement( 
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context) => const MyWatchlist()));
+                },
+              )
             ],
           ),
-        ),
-      );
-    }
-    return Scaffold(
-      body: Container(
-        child: Column(children: mywidgets),
-      ),
     );
   }
 }
