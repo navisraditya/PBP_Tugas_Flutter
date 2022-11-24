@@ -412,3 +412,36 @@ class _DataBudgetState extends StatelessWidget {
 
 
 ```
+
+# Tugas 9
+
+Muhammad Navis Raditya Riayatsyah (2106717291)
+
+Collaborator: Reza Taufiq Yahya
+
+*  Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+    Bisa. Akan tetapi, jika model tidak ada, penyajian data nantinya akan jauh lebih tidak terstruktur dibandingkan ketika model telah dibuat.
+
+*  Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+    Beberapa baru yang dipakai pada tugas kali ini adalah:
+    
+    - flexible; untuk mengontrol baris dan kolom agar layout dapat menyesuaikan apabila terjadi perubahan
+
+    - RichText; sebagai styling format untuk teks yang digunakan. berfungsi untuk menampilkan teks dalam berbagai bentuk, warna, dan ukuran
+
+*  Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+
+    - menambahkan dependency http ke project
+    - membuat model
+    - melakukan HTTP GET request untuk mengambil data JSON
+    - mengubah file JSON yang didapat sesuai dengan model yang telah dibuat
+    - data kemudian ditampilkan (dalam project ini) dengan FutureBuilder
+
+*  Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
+    - menambahkan path menuju page mywatchlist pada drawer
+    - membuat model mywatchlist menggunakan quicktype dengan data dari Tugas 3 PBP dan membuat class fetchWatchlist untuk melakukan dependensi HTTP ke link heroku Tugas 3 PBP
+    - Seperti Tugas 8, data yang sudah di fetch kemudian ditampilkan dalam bentuk card pada file mywatchlist.dart di folder page
+    - Membuat interaksi ketika card diberikan interaksi, maka akan langsung dialihkan ke halaman mywatchlistdetail.dart
