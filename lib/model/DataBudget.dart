@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/main.dart';
 import 'package:counter_7/model/TambahBudget.dart';
 import 'package:counter_7/utils/drawer.dart';
 
@@ -38,7 +37,10 @@ class _DataBudgetState extends State<DataBudget> {
       );
     }
     return Scaffold(
-      drawer: const drawer(),
+      appBar: AppBar(
+        title: const Text('Data Budget'),
+      ),
+      drawer: drawer(),
       body: Column(children: mywidgets),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:counter_7/model/mywatchlist.dart';
 import 'package:counter_7/utils/drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class MyWatchListDetailPage extends StatelessWidget {
   final MyWatchList myWatchList;

@@ -1,4 +1,6 @@
+import 'package:counter_7/page/mywatchlistdetail.dart';
 import 'package:counter_7/utils/drawer.dart';
+import 'package:counter_7/utils/fetchWatchlist.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/model/mywatchlist.dart';
 
